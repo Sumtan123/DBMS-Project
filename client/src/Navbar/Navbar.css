@@ -1,0 +1,50 @@
+.navbar_Container {
+    display: flex;
+    padding-block: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(255, 77, 0, 1),rgba(255, 204, 0, 1));
+}
+.nav_logo {
+    width: 2.5rem;
+    height: auto;
+    /* box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3); */
+    box-shadow: 4px 4px 10px rgb(88, 88, 88),4px 4px 10px rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+.Nav_list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.3rem;
+
+}
+.Nav_list .nav_items:hover {
+    text-decoration: 2px solid white underline;
+    transform: scale(1.2);
+    /* box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3); */
+    text-shadow: 2px 2px 2px rgb(255, 64, 0);
+    cursor: pointer;
+}
+.Nav_list .cart:hover {
+    transform: scale(1.4);
+}
+
+.Nav_list .cart:hover {
+    transform: scale(1.4);
+}
+
+.cart-count {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    margin-left: 5px;
+}

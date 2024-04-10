@@ -1,0 +1,32 @@
+[
+    {
+        "Rest_ID":1,
+        "RestName":"Kakal Kai Ruchi",
+        "Ratings":4.2,
+        "RestPhno":"3762140921",
+        "DeliveryTime":"30-35mins",
+        "CuisineType":"South Indian",
+        "ImageLink":"https://b.zmtcdn.com/data/pictures/1/20798591/075b17549e5026a699b57a18c0a997b8.jpeg",
+        "RestMenuLink":"/restaurant/KakalKaiRuchi"
+    },
+    {
+        "Rest_ID":2,
+        "RestName":"Paradise Biryani",
+        "Ratings":4.1,
+        "RestPhno":"5271934729",
+        "DeliveryTime":"35-40mins",
+        "CuisineType":"North Indian",
+        "ImageLink":"https://www.paradisefoodcourt.in/images/marathahalli.jpg",
+        "RestMenuLink":""
+    },
+    {
+        "Rest_ID":3,
+        "RestName":"Truffles",
+        "Ratings":4.6,
+        "RestPhno":"8249103442",
+        "DeliveryTime":"30-35mins",
+        "CuisineType":"American, Desserts, Continental, Italian",
+        "ImageLink":"https://i.ytimg.com/vi/paJSeQKjIF4/maxresdefault.jpg",
+        "RestMenuLink":""
+    }
+]

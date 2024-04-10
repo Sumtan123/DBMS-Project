@@ -1,0 +1,125 @@
+.Checkout-bg {
+    background-image: url('https://img.freepik.com/premium-vector/delivery-products-food-delivery-delivery-track-flat-design-modern-concept-online-service-concept_106796-1784.jpg?w=740');
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.Checkout-bg h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    left:40%;
+    top:10%;
+    color: transparent;
+    background: linear-gradient(45deg, #ffcc00, #ff6600, #e60000);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: moveLeftToRight 2s infinite alternate, gradientAnimation 4s linear infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+.delivery-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+.delivery-info:hover {
+    background: linear-gradient(to bottom right, #ff8c00, #ffd700);
+}
+
+.delivery-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.delivery-info h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.delivery-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.feedback-form {
+    width: 40%;
+    position: absolute;
+    right: 1rem;
+    bottom: 10rem;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff8c00, #ffd700);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .feedback-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feedback-form label {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .feedback-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #45a049;
+  }

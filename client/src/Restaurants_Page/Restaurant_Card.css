@@ -1,0 +1,45 @@
+.RestPage-Card {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2rem;
+    box-shadow: 5px 2px 10px rgb(77, 77, 77),5px 2px 10px rgb(77, 77, 77);
+    width: 15rem;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+    background-color: white;
+    overflow: auto;
+    height:300px;
+}
+
+.RestPage-Card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.RestCard-desc {
+    display: flex;
+    flex-direction: column;
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+    margin: 0.5rem;
+    text-wrap: wrap;
+    gap: 0.5rem;
+    height:100%;
+}
+
+.RestCard-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.RestCard-image {
+    width: auto;
+    height:10rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.RestCard-cuisine{
+    height:20px;
+    color: black;
+}

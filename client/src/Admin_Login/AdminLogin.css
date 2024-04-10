@@ -1,0 +1,79 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1rem;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin:1rem;
+}
+
+.customer-list,
+.restaurant-list,
+.feedback-list,
+.orders-list {
+  list-style: none;
+}
+
+.admin-container h1{
+  text-align: center;
+}
+
+.customer-name,
+.restaurant-name,
+.feedback-item,
+.order-item {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.customer-name,
+.restaurant-name {
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.feedback-item {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.feedback-item b {
+  font-weight: bold;
+}
+
+.order-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+
+.order-item p {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.view-all-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.view-all-btn:hover {
+  background-color: #3e8e41;
+}

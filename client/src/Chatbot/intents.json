@@ -1,0 +1,294 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hey", "Hello", "Good day"],
+      "responses": ["Hello! Welcome to our food delivery service. How can I assist you today?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["Goodbye! If you have any more questions, feel free to ask."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Appreciate it"],
+      "responses": ["You're welcome! If you need anything else, just let me know."]
+    },
+    {
+      "tag": "restaurants_suggestions",
+      "patterns":[
+        "Restaurants list ?",
+        "Restaurants suggestions ?",
+        "Can you suggest some Restaurants ?"
+      ],
+      "responses": [
+        "Certainly! Here is list of some restaurants:\n1. Truffles\n2. Chai Point\n3. Polar Bear\n4. A2B\n5. Empire\n6. Easy Bites\n7. Dominos\n8. Biryani Zone"
+      ]
+    },
+    {
+      "tag": "food_suggestion",
+      "patterns": [
+        "Can you suggest some food options?",
+        "What should I order?",
+        "Any recommendations?",
+        "I'm hungry, what can I eat?",
+        "Any good food options?",
+        "Tell me what's on the menu today",
+        "I need some food suggestions",
+        "What's popular right now?"
+      ],
+      "responses": [
+        "Certainly! Here are some popular options:\n1. Kakal Kai Ruchi: Idli Vada Sambhar, Onion Uttapam, Plain Dosa\n2. Paradise Biryani: Kulcha, Paneer Butter Masala Chicken Dum Biryani\n3. Truffles: Crispy Veg Burger, Hot Chocolate Fudge Kitkat Milkshake",
+        "Sure thing! Consider these choices:\n1. A2B: Masala Dosa, Paddu\n2. Dominos: Pineapple Pizza, Farmhouse Pizza Pasta Arabiatta\n3. Bhel puri: Dahi Puri, Sev Puri",
+        "Certainly! Here are some popular options:\n1. McDonalds: Crispy Veg Burger, Chicken Tandoori Burger, Chocozilla Sundae\n2. Paakashala: Veg Noodles, Gobi Manchurian, Paneer Butter Masala\n3. Maiyas: Idli Vada Sambhar, Masala Dosa",
+        "Sure thing! Consider these choices:\n1. Biryani Zone: Veg Dum Biryani, Kulcha, Naan, Chicken Dum Biryani\n2. Chai Point: Bun Dabeli, Sev Puri, Bun Samosa\n3. Hyderabadi Bawarchi: Veg Noodles, Gobi Manchurian, Schezwan Noodles"
+      ]
+    },
+    {
+      "tag": "truffles",
+      "patterns":[
+        "Recommend me some dishes from Truffles",
+        "Special at Truffles?",
+        "Truffles special?"
+      ],
+      "responses":["Certainly! Truffles is known for its delicious Crispy Veg Burger, Chicken Tandoori Burger, and Kitkat Milkshake. Enjoy the delightful flavors!"]
+    },
+    {
+      "tag": "chai-point",
+      "patterns":[
+        "Recommend me some dishes from Chai point",
+        "Special at Chai point?",
+        "Chai point special?"
+      ],
+      "responses":["At Chai Point, you should try their Bun Dabeli, Sev Puri, and Masala Peanut Chaat. These snacks pair perfectly with their beverages."]
+    },
+    {
+      "tag": "polar-bear",
+      "patterns":[
+        "Recommend me some dishes from Polar bear",
+        "Special at Polar bear?",
+        "Polar bear special?"
+      ],
+      "responses":["Polar Bear offers delectable desserts like DBC (Death By Chocolate), Gulab Jamun, and Gudbud Sundae. Indulge in these sweet delights!"]
+    },   
+    {
+      "tag": "A2B",
+      "patterns":[
+        "Recommend me some dishes from A2B",
+        "Special at A2B?",
+        "A2B special?"
+      ],
+      "responses":["A2B (Adyar Anand Bhavan) is famous for its Masala Dosa, Paddu, and Naan. These dishes showcase the diverse menu of South and North Indian cuisines."]
+    }, 
+    {
+      "tag": "Empire",
+      "patterns":[
+        "Recommend me some dishes from empire",
+        "Special at empire?",
+        "Empire special?"
+      ],
+      "responses":["Hotel Empire is renowned for its Ghee Rice, Tandoori Roti, and Ambur Chicken Dum Biryani. Explore the flavors of North Indian and Biryani specialties."]
+    }, 
+    {
+      "tag": "easy-bites",
+      "patterns":[
+        "Recommend me some dishes from Easy bites",
+        "Special at Easy bites?",
+        "Easy bites special?"
+      ],
+      "responses":["Easy Bites offers delicious snacks like Bhelpuri, Dahi Puri, and Masala Peanut Chaat. These quick bites are perfect for a satisfying meal."]
+    },
+    {
+      "tag": "dominos",
+      "patterns":[
+        "Recommend me some dishes from Dominos",
+        "Special at Dominos?",
+        "Dominos special?"
+      ],
+      "responses":["Dominos has specials like Pineapple Pizza, Pasta Arabiatta, and French Fries. Treat yourself to these tasty options from their Italian-inspired menu."]
+    },
+    {
+      "tag": "biryani-zone",
+      "patterns":[
+        "Recommend me some dishes from Biryani zone",
+        "Special at Biryani zone?",
+        "Biryani zone special?"
+      ],
+      "responses":["For vegetarian delights, Biryani Zone has options like Veg Dum Biryani, Naan, and Kulcha. Enjoy the rich flavors of these meat-free choices."]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "Where's my order?",
+        "Check my order status",
+        "Track my delivery"
+      ],
+      "responses": [
+        "I can help you track your order. Please provide your order number, and I'll get the latest status for you."
+      ]
+    },
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "How can I contact customer support?",
+        "Need assistance",
+        "Customer service contact",
+        "Help required",
+        "Support needed"
+      ],
+      "responses": [
+        "If you need assistance, don't hesitate to contact our customer support team. You can reach us at [+919663867936 , +919513805900]. We're here to help!",
+        "For any inquiries or assistance, feel free to contact our dedicated customer support team at [+919663867936 , +919513805900].",
+        "Customer satisfaction is our top priority. If you require support, please call us at [+919663867936 , +919513805900] or visit our support page at <a href='http://localhost:5173/contact'>http://localhost:5173/contact</a>",
+        "We're here to assist you! Reach out to our customer support team at [+919663867936 , +919513805900] for any queries or concerns.",
+        "Need help? Our customer support team is ready to assist you. Call us at [+919663867936 , +919513805900] or visit our support page at <a href='http://localhost:5173/contact'>http://localhost:5173/contact</a>"
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "What's on the menu?",
+        "Tell me about the menu",
+        "Show me the food options",
+        "Any new items on the menu?"
+      ],
+      "responses": [
+        "Our menu includes a wide range of delicious options. You can explore categories like Appetizers, Main Courses, Desserts, and Beverages. If you have a specific cuisine in mind, feel free to let me know!"
+      ]
+    },
+    {
+      "tag": "specials",
+      "patterns": [
+        "Tell me about the current specials",
+        "What's unique on the menu today?",
+        "Any special treats available right now?",
+        "Inform me about today's exclusive offers",
+        "Are there any limited-time promotions?",
+        "Give me details on the daily specials",
+        "What are the featured items for today?",
+        "Any surprises on the menu for today?",
+        "Today's special?"
+      ],
+      "responses": [
+        "Explore today's specials, including Hot Chocolate Fudge from Truffles, Ambur Chicken Dum Biryani from Hotel Empire, and a special combo offer at Chai Point. Indulge in these delightful choices!",
+        "Discover the unique offerings for today, such as Pineapple Pizza from Dominos, Kitkat Milkshake from McDonalds, and a special dessert combo from Polar Bear. Treat yourself!",
+        "Check out the specials for today, featuring Crispy Veg Burger from Truffles, Chicken Dum Biryani from Biryani Zone, and a limited-time discount on all biryanis at Paradise Biryani. Don't miss the deliciousness!",
+        "Today's specials include Pasta Arabiatta from Hari Super Sandwich, Gudbud Sundae from Polar Bear, and a special discount on all beverages at Easy Bites. Treat yourself to these fantastic choices!",
+        "Explore the surprises on the menu, including Chocozilla Sundae from McDonalds, Chicken Dum Biryani from Nandhana Palace, and a special dessert combo at Paakashala. Enjoy these exclusive treats!",
+        "Discover the featured items for today, such as French Fries from Easy Bites, Veg Dum Biryani from Biryani Zone, and a limited-time offer on all desserts at Polar Bear. Indulge in these delightful choices!",
+        "Check out the exclusive offers for today, featuring Naan from Paradise Biryani, Dahi Puri from Easy Bites, and a special discount on all pizzas at Dominos. Don't miss out on these fantastic deals!",
+        "Today's specials include Onion Uttapam from Kakal Kai Ruchi, Crispy Veg Burger from Truffles, and a special combo offer on all snacks at Chai Point. Treat yourself to these fantastic choices!"
+      ]
+    },
+    {
+      "tag": "south-indian",
+      "patterns":[
+        "Give south-indian options",
+        "South-Indian special?",
+        "Any good south-indian restaurants?"
+      ],
+      "responses":["Great choice! For South Indian cuisine, I recommend trying Idli Vada Sambhar or Masala Dosa from Kakal Kai Ruchi and A2B. Enjoy your meal!"]
+    },
+    {
+      "tag": "north-indian",
+      "patterns":[
+        "Give north-indian options",
+        "North-Indian special?",
+        "Any good north-indian restaurants?"
+      ],
+      "responses":["For delightful North Indian dishes, consider ordering Naan, Tandoori Roti, and Paneer Butter Masala from Paradise Biryani or Hotel Empire. Bon appétit!"]
+    },
+    {
+      "tag": "chinese",
+      "patterns":[
+        "Give chinese options",
+        "Chinese special?",
+        "Any good chinese restaurants?"
+      ],
+      "responses":["For authentic Chinese flavors, check out Chicken Dum Biryani or Veg Noodles from Hyderabadi Bawarchi. Satisfy your Chinese food cravings!"]
+    },
+    {
+      "tag": "andhra",
+      "patterns":[
+        "Give andhra options",
+        "Andhra special?",
+        "Any good andhra restaurants?"
+      ],
+      "responses":["Craving Andhra cuisine? Try Chicken Dum Biryani or Kulcha from Nandhana Palace. It's a perfect choice for a flavorful experience!"]
+    },
+    {
+      "tag": "italian",
+      "patterns":[
+        "Give italian options",
+        "Italian special?",
+        "Any good italian restaurants?"
+      ],
+      "responses":["Indulge in Italian goodness with Pasta Arabiatta or Garlic Breadsticks from Dominos. It's a taste of Italy delivered to your doorstep!"]
+    },
+    {
+      "tag": "fast-food",
+      "patterns":[
+        "Give fast-food options",
+        "Fast-food special?",
+        "Any good fast-food restaurants?"
+      ],
+      "responses":["For Fast Food enthusiasts, enjoy Bhelpuri, French Fries, or Pasta Arabiatta from Easy Bites. It's a quick and delicious choice!"]
+    },
+    {
+      "tag": "order_placement",
+      "patterns": [
+        "How can I place an order?",
+        "Walk me through the ordering process",
+        "I want to order food"
+      ],
+      "responses": [
+        "Placing an order is easy! Simply browse the menu, add items to your cart, and proceed to checkout. You can also customize your order and choose your preferred payment method. If you need assistance, feel free to ask."
+      ]
+    },
+    {
+      "tag": "delivery_time",
+      "patterns": [
+        "How long does delivery take?",
+        "When will my food arrive?",
+        "Delivery time estimate"
+      ],
+      "responses": [
+        "Delivery times vary based on your location and restaurant traffic. On average, it takes around [Estimated Time] for your food to arrive. You can track your order in real-time for more accurate updates."
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "What payment methods do you accept?",
+        "Can I pay with [Payment Method]?",
+        "Tell me about payment options"
+      ],
+      "responses": [
+        "We accept various payment methods, including credit/debit cards, mobile wallets, and online banking. At checkout, you can choose the option that suits you best. All transactions are secure and encrypted."
+      ]
+    },
+    {
+      "tag": "vegetarian_options",
+      "patterns": [
+        "Do you have vegetarian options?",
+        "Suggest some vegetarian dishes",
+        "Vegetarian menu"
+      ],
+      "responses": [
+        "Certainly! Our menu features a variety of delicious vegetarian options. You can try Kakal Kai Ruchi, Paakashala, A2B and more. Enjoy your meat-free meal!"
+      ]
+    },
+    {
+      "tag": "order_modification",
+      "patterns": [
+        "Can I modify my order?",
+        "Change my order",
+        "Add/remove items from my order"
+      ],
+      "responses": [
+        "Once an order is confirmed, modifications may be limited. However, you can contact our customer support at [+919663867936 , +919513805900] to discuss any changes you'd like to make. We'll do our best to assist you."
+      ]
+    }
+  ]
+}

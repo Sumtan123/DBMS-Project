@@ -1,0 +1,68 @@
+.RestaurantPage {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding-bottom: 1rem;
+    background-color: #fff2eb;
+}
+.RestPage-box {
+    background-image: url("../assets/Images/loginBuffet2.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 17rem;
+    background-position: 0px -200px;
+}
+.RestPage-box .background-overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow:4px 4px 15px #ffffff, 4px 4px 15px #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.RestPage-brandName, .RestPage-quote {
+    color: #ffd900fd;
+    text-shadow: 2px 2px 5px rgb(253, 97, 0);  /* Doubtful abt working of this */
+    -webkit-text-stroke: 0.4px rgb(253, 97, 0);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.RestPage-brandName {
+font-size: 2.5rem;}
+.search-Container {
+    display: inline-flex;
+    gap: 0.5rem;
+    border: 1px solid black;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    align-self: center;
+    box-shadow: 8px 2px 20px rgb(0, 0, 0),8px 2px 20px rgb(0, 0, 0);
+    /* margin-left: ; */
+    width: 50%;
+    padding: 0.70rem;
+}
+
+.Rest-Search {
+    border: none;
+    outline: none;
+    font-weight: 600;
+    flex: 5;
+}
+
+.RestList {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+

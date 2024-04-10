@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+.Home_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top:3.5rem; */
+    background-image: url('https://img.freepik.com/free-photo/sideways-asian-dish-with-copy-space_23-2148242494.jpg?t=st=1709698761~exp=1709702361~hmac=7dbcb4769cf4687e5322fe07c577ec18c802c1a0412655b81e4742c3e7cd6853&w=1060');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+/* .homepage_image{
+  height:100vh;
+} */
+
+body{
+    background-color: #fff2eb;
+}
+.Home_brandNameContainer {
+    background-color:rgb(201, 130, 0);
+    width: fit-content;
+}
+.Home_brandName {
+    font-size: 6rem;
+    font-family: 'Merienda', sans-serif;
+    margin: 1rem auto;
+    color: #fffefe61;
+    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+    background-size: 110px 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: flick 3s infinite;
+  }
+  @keyframes flick {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+
+  /* .homepage_image{
+    background-image: url('https://img.freepik.com/free-vector/cloud-kitchen-concept-with-order-delivery-symbols-isometric-vector-illustration_98292-9015.jpg?t=st=1709482190~exp=1709485790~hmac=ff8c02eb0d74fd763c4c26edf1a4f636a3d76fd257883cbef0f96d4a4e1f2699&w=900');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:400px;
+    width:400px;
+    margin-left: 40rem;
+    margin-bottom: 5rem;
+    position: absolute;
+    bottom:0;
+  } */
+  .Home_order_button {
+    font-size: 1.5em;
+    background-color: #f39c12;
+    color: #fff;
+    font-family:'Poppins';
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    align-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Home_order_button:hover {
+    background-color: #e67e22;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .Home_homepage_heading {
+    font-family: 'Poppin';
+    font-size: 2.5em;
+    color: #e74c3c; 
+    margin: 20px 0; 
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .Home_description{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: 
+      typing 3s infinite;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 38% }
+  }
+
+  .Home_chatbot_button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff8c00; /* Orangish color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Add this style for the chatbot button hover effect */
+  .Home_chatbot_button:hover {
+    background-color: #e07b00; /* Darker orangish color on hover */
+  }
+  
+  

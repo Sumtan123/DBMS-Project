@@ -1,0 +1,26 @@
+[
+    {
+        "DeliveryBoy_ID":1,
+        "DeliveryBoy_Name":"John",
+        "DeliveryBoy_Ph":"9001008002",
+        "DeliveryBoy_Ratings":4.2
+    },
+    {
+        "DeliveryBoy_ID":2,
+        "DeliveryBoy_Name":"Kumar",
+        "DeliveryBoy_Ph":"9001008001",
+        "DeliveryBoy_Ratings":4.1
+    },
+    {
+        "DeliveryBoy_ID":3,
+        "DeliveryBoy_Name":"Drake",
+        "DeliveryBoy_Ph":"9001008003",
+        "DeliveryBoy_Ratings":4.3
+    },
+    {
+        "DeliveryBoy_ID":4,
+        "DeliveryBoy_Name":"Abdul",
+        "DeliveryBoy_Ph":"9001008004",
+        "DeliveryBoy_Ratings":4.8
+    }
+]

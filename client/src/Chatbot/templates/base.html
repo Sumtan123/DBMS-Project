@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./static/styles.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dinebot</title>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/?size=160&id=108652&format=png">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is DineBot. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox--active  ">
+            <button class="chatbox__button">Chatbot</button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var SCRIPT_ROOT = "{{ request.script_root }}";
+    </script>
+    <script type="text/javascript" src="./static/app.js"></script>
+
+</body>
+</html>

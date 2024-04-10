@@ -1,0 +1,40 @@
+.profile {
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Orange gradient background */
+}
+
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-item {
+    background-color: #fff; /* White background for each order item */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.order-item:hover {
+    transform: translateY(-5px); /* Move the item up slightly on hover */
+}
+
+.order-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.order-info {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; /* Dark text color */
+}
+
+/* Styling for specific order info */
+.order-info b {
+    font-weight: bold; /* Make the text bold */
+    color: #555; /* Darker text color */
+}
+

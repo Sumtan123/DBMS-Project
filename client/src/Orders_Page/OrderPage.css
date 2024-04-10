@@ -1,0 +1,61 @@
+.order-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+  }
+  
+  .OrderPageTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .OrderPageTable th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  .order-page-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 1rem;
+  }
+  
+  .order-page-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-summary a {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    background-color: #3e8e41;
+  }

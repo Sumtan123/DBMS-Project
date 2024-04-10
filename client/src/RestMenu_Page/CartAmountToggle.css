@@ -1,0 +1,27 @@
+.cart-button {
+    display: flex;
+    justify-content: center;
+}
+
+.amount-toggle {
+    display: flex;
+    gap: 1rem;
+}
+
+.amount-style {
+    text-align: center;
+    width: 1rem;
+}
+
+.toggle-btn {
+    background: linear-gradient(135deg, rgba(255, 77, 0, 1),rgba(255, 204, 0, 1));
+    border: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 40%;
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    box-shadow: 2px 2px 4px gray;
+}

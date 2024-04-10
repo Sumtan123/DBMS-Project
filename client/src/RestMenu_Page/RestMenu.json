@@ -1,0 +1,26 @@
+[
+    {
+        "Food_ID":1,
+        "FoodName":"Vada Pav",
+        "Price":30,
+        "Calories":290,
+        "Description":"Famous street food in Mumbai is an Indian Street food made by stuffing deep fried potato fritters and served with spicy chutneys in side of Pav.",
+        "FoodImage":"https://www.cookwithmanali.com/wp-content/uploads/2018/04/Vada-Pav-500x375.jpg"
+    },
+    {
+        "Food_ID":2,
+        "FoodName":"Kachori",
+        "Price":30,
+        "Calories":250,
+        "Description":"Served with spicy chole, crumbled kachori, yogurt, mint & tamarind chutney.",
+        "FoodImage":"https://www.funfoodfrolic.com/wp-content/uploads/2022/03/Kachori-Blog.jpg"
+    },
+    {
+        "Food_ID":3,
+        "FoodName":"Bhelpuri",
+        "Price":55,
+        "Calories":289,
+        "Description":"Savoury snack from the streets of Mumbai made with puffed rice, tossed with potatoes, onion, tomato & tangy chutneys.",
+        "FoodImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Indian_cuisine-Chaat-Bhelpuri-03.jpg/1200px-Indian_cuisine-Chaat-Bhelpuri-03.jpg"
+    }
+]
