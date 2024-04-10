@@ -43,5 +43,28 @@ _*This website is intended for educational purposes only, and not intended for c
 ### Chatbot page
 ![DineSwift Home Page Image](/websiteimages/chatbotpage.png)
 
-## Installation:
-MySQL installation
+## Installation and Running:
+
+#### Give the command npm i in both the client and the server folders to install necessary packages
+
+### MySQL installation:
+1. Install MySQL on your system. You can download it from the official MySQL website: MySQL Downloads
+2. Follow the installation instructions provided for your operating system.
+3. During the installation process, set up a username and password for your MySQL database. Make a note of these credentials as you'll need them later.
+4. Create the database referring to the MySQL_Queries file in the repository.
+
+### MongoDB installation:
+1. Install MongoDB on your system. You can download it from the official MongoDB website: MongoDB Downloads
+2. Follow the installation instructions provided for your operating system.
+3. Create a database in mongodb
+
+### Setting up database credentials:
+1. Navigate to the server folder and server.js file
+2. Replace host_name, user_name, sql_password, database_name, mongodb_url with your database credentials
+3. Save the changes to server.js
+
+### Running the Application:
+1. Start the React.JS application by navigating to the client folder and giving the command : ```npm run dev```
+2. Start the Node.JS backend server by navigating the server folder and giving the command : ```npm start```
+3. Start the Chatbot file by navigating to the Chatbot folder under client/src and then give the command : ```python app.py```
+4. You can give own prompts and responses by changing the intents.json file and training the chatbot again using the command ```python train.py```
