@@ -8,3 +8,7 @@ _*This website is intended for educational purposes only, and not intended for c
 + In addition to ordering food, DineSwift includes a "Contact Us" feature, allowing users to communicate with admins for assistance.
 + A separate login for admin is also provided, where the admin is able to monitor the customers, restaurants, check recent feedbacks and orders.
 
+# Images of the Website
+
+## Installation:
+MySQL installation
