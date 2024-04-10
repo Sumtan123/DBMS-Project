@@ -1,6 +1,6 @@
 # DineSwift Food Delivery Management System
 
-_*This website is intended for educational purposes only, and not intended for commercial use._
+_*This website is intended for educational purposes only, and not intended for commercial use.*_
 
 + DineSwift is an online food delivery management system developed using MySQL, MongoDB, React.JS, Node.JS and Express.JS. This comprehensive web application provides users with a seamless platform to order food from various restaurants comprising several cuisine types.
 + The key features of DineSwift include a Customer Care Chatbot, User profile page to display order history, random assigning of delivery boys, feedback section and so on. All these are connected to the databses in the backend.
