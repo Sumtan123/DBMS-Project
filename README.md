@@ -11,37 +11,37 @@ _*This website is intended for educational purposes only, and not intended for c
 
 ## Images of the Website
 ### Home page
-![DineSwift Home Page Image](/websiteimages/homepage.jpg)
+![DineSwift Home Page Image](/websiteimages/homepage.png)
 
 ### Restaurants page
-![DineSwift Restaurants Page Image](/websiteimages/restaurantspage.jpg)
+![DineSwift Restaurants Page Image](/websiteimages/restaurantspage.png)
 
 ### Menu page
-![DineSwift Menu Page Image](/websiteimages/menupage.jpg)
+![DineSwift Menu Page Image](/websiteimages/menupage.png)
 
 ### Orders page
-![DineSwift Orders Page Image](/websiteimages/orderspage.jpg)
+![DineSwift Orders Page Image](/websiteimages/orderspage.png)
 
 ### Checkout page
-![DineSwift Checkout Page Image](/websiteimages/checkoutpage.jpg)
+![DineSwift Checkout Page Image](/websiteimages/checkoutpage.png)
 
 ### Contact page
-![DineSwift Contact Page Image](/websiteimages/contactpage.jpg)
+![DineSwift Contact Page Image](/websiteimages/contactpage.png)
 
 ### Login page
-![DineSwift Login Page Image](/websiteimages/loginpage.jpg)
+![DineSwift Login Page Image](/websiteimages/loginpage.png)
 
 ### Signup page
-![DineSwift Signup Page Image](/websiteimages/signuppage.jpg)
+![DineSwift Signup Page Image](/websiteimages/signuppage.png)
 
 ### Userprofile page
-![DineSwift Home Page Image](/websiteimages/userprofilepage.jpg)
+![DineSwift Home Page Image](/websiteimages/userprofilepage.png)
 
 ### Admin page
-![DineSwift Home Page Image](/websiteimages/adminpage.jpg)
+![DineSwift Home Page Image](/websiteimages/adminpage.png)
 
 ### Chatbot page
-![DineSwift Home Page Image](/websiteimages/chatbotpage.jpg)
+![DineSwift Home Page Image](/websiteimages/chatbotpage.png)
 
 ## Installation:
 MySQL installation
