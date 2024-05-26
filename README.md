@@ -68,3 +68,7 @@ _*This website is intended for educational purposes only, and not intended for c
 2. Start the Node.JS backend server by navigating the server folder and giving the command : ```npm start```
 3. Start the Chatbot file by navigating to the Chatbot folder under client/src and then give the command : ```python app.py```
 4. You can give own prompts and responses by changing the intents.json file and training the chatbot again using the command ```python train.py```
+
+## Contributors
++ Sumith S Tantry
++ Tanmay S Lal 
