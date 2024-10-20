@@ -48,7 +48,7 @@ _*This website is intended for educational purposes only, and not intended for c
 ![DineSwift Analytics Page Image](/websiteimages/analyticsdashboard2.png)
 
 ### Restaurant Login Page
-![DineSwift Restaurants Page Image](/websiteimages/restaurantslogin.png)
+![DineSwift Restaurants Page Image](/websiteimages/restaurantlogin.png)
 
 ### Chatbot page
 ![DineSwift Home Page Image](/websiteimages/chatbotpage.png)
