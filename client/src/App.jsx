@@ -12,10 +12,10 @@ import RestMenu from "./RestMenu_Page/RestMenu.jsx";
 import OrderPage from './Orders_Page/OrderPage.jsx';
 import Checkout from "./Checkout_Page/Checkout.jsx";
 import ContactPage from './Contact_Page/ContactPage.jsx';
-import RestaurantLogin from './Restaurant_login/RestaurantLogin.jsx';
 import AdminLogin from './Admin_Login/AdminLogin.jsx';
 import ProfilePage from './Profile_Page/ProfilePage.jsx';
 import { CartProvider } from './RestMenu_Page/cartContext.jsx';
+import RestaurantDashboard from './Restaurant_login/RestaurantDashboard.jsx';
 import "./App.css";
 
 function App() {
@@ -39,8 +39,9 @@ function App() {
           <Route path='/orders' element={<OrderPage user={user} setUser={setUser}/>} />
           <Route path='/checkoutPage' element={<Checkout user={user} setUser={setUser} />} />
           <Route path='/contact' element={<ContactPage user={user} setUser={setUser} />} />
-          <Route path='/restaurant-dashboard' element={<RestaurantLogin />} />
+          {/* <Route path='/restaurant-dashboard' element={<RestaurantLogin />} /> */}
           <Route path='/admin-dashboard' element={<AdminLogin />} />
+          <Route path='/restaurant-dashboard' element={<RestaurantDashboard user={user} setUser={setUser} />} />
           <Route path='/profile' element={<ProfilePage user={user} setUser={setUser}/>}/>
           {/* <Route
           path="/"

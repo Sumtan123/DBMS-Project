@@ -1,6 +1,7 @@
 import './Checkout.css';
 import deliveryData from '../DeliveryBoy_Page/DeliveryBoy.json';
 import { useEffect, useState } from "react";
+import { Navbar_RestoFood } from '../Navbar/Navbar';
 function Checkout({ user, setUser }) {
     const [selectedDeliveryBoy, setSelectedDeliveryBoy] = useState(null);
     const [ratings, setRatings] = useState(0);
@@ -56,8 +57,13 @@ function Checkout({ user, setUser }) {
         return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     };
 
+    const handleLogout = () => {
+        setUser(null);
+    };
+
     return (
         <>
+            <Navbar_RestoFood user={user} setUser={setUser} onLogout={handleLogout} />
             <div className="Checkout-bg"><h1>{typeof timeLeft === 'number' ? `Delivering in ${Math.floor(timeLeft / 60)}:${(timeLeft % 60).toString().padStart(2, '0')} mins` : timeLeft}</h1></div>
             <div className="delivery-info">
                 {selectedDeliveryBoy && (

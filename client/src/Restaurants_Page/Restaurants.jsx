@@ -1,4 +1,4 @@
-import "./Restaurants.css";
+import "../Restaurants_Page/Restaurants.css";
 import { Navbar_RestoFood } from "../Navbar/Navbar.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -10,9 +10,13 @@ function Restaurants({ user, setUser }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
+        console.log("Search Term:", searchTerm); // Debugging to check the value of searchTerm
         fetch(`http://localhost:8081/restaurant?searchTerm=${searchTerm}`)
             .then(res => res.json())
-            .then(restaurantList => setRestaurantList(restaurantList))
+            .then(restaurantList => {
+                console.log("Fetched Restaurants:", restaurantList); // Debugging to check the returned data
+                setRestaurantList(restaurantList);
+            })
             .catch(err => console.log(err))
     }, [searchTerm]);
 
@@ -26,7 +30,7 @@ function Restaurants({ user, setUser }) {
 
     return (
         <div className="RestaurantPage">
-            <Navbar_RestoFood user={user} setUser={setUser} onLogout={handleLogout}/>
+            <Navbar_RestoFood user={user} setUser={setUser} onLogout={handleLogout} />
             <div className="RestPage-box">
                 <div className="background-overlay">
                     <p className="RestPage-brandName">DineSwift</p>
@@ -35,9 +39,15 @@ function Restaurants({ user, setUser }) {
 
                 <div className="search-Container">
                     <FontAwesomeIcon icon={faSearch} />
-                    <input type="text" placeholder="Search Restaurant" className="Rest-Search" onChange={handleSearchChange} />
+                    <input 
+                        type="text" 
+                        placeholder="Search Restaurant or Food Item" 
+                        className="Rest-Search" 
+                        onChange={handleSearchChange} 
+                    />
                 </div>
             </div>
+
             <div className="RestList">
                 {restaurantList.map((Rest) => 
                     <Restaurant_Card 

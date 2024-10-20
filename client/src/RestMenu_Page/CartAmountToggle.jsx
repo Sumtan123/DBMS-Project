@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
-import "./CartAmountToggle.css"
+import "../RestMenu_Page/CartAmountToggle.css";
 
 const CartAmountToggle = (props) => {
     return (

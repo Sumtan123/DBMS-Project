@@ -8,18 +8,22 @@ const mongoose = require('mongoose');
 app.use(cors())
 app.use(express.json());
 const db = mysql2.createConnection({
-    host: {host_name},
-    user: {user_name},
-    password: {sql_password},
-    database: {database_name}
+    host: "localhost",
+    user: 'root',
+    password: 'Jaidbms@123#',
+    database: 'dineswift'
 })
-mongoose.connect({mongodb_url}, {
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/dineswift', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
     .then(() => console.log('Connected to MongoDB'))
     .catch((error) => console.error('Error connecting to MongoDB:', error.message));
 const Feedback = require('./Feedback');
+
+
 app.get('/', (req, res) => {
     return res.json("From backend side");
 })
@@ -35,24 +39,37 @@ app.get('/customer', (req, res) => {
 });
 
 app.get('/restaurant', (req, res) => {
-    const searchTerm = req.query.searchTerm; // Assuming the search term is passed as a query parameter
+    const searchTerm = req.query.searchTerm || ''; // Default to an empty string if no searchTerm is provided
+    console.log("Received Search Term:", searchTerm);
+    let sql = `
+        SELECT restaurant.*, GROUP_CONCAT(DISTINCT cuisine.CuisineType) AS CuisineTypes 
+        FROM restaurant
+        LEFT JOIN cuisine ON restaurant.Rest_ID = cuisine.Rest_ID
+        LEFT JOIN menu ON restaurant.Rest_ID = menu.Rest_ID
+        LEFT JOIN food ON menu.Food_ID = food.Food_ID
 
-    // Constructing the SQL query with a WHERE clause to filter based on the search term
-    let sql = "SELECT restaurant.*, GROUP_CONCAT(cuisine.CuisineType) AS CuisineTypes FROM restaurant JOIN cuisine ON restaurant.Rest_ID = cuisine.Rest_ID";
+    `;
 
-    // Checking if a search term is provided
-    if (searchTerm) {
-        // Using LIKE clause to perform a partial match search
-        sql += ` WHERE restaurant.Rest_Name LIKE '%${searchTerm}%'`;
+    if (searchTerm !== '') {
+        sql += `
+            WHERE restaurant.Rest_Name LIKE ? 
+            OR food.Food_Name LIKE ?
+        `;
     }
 
     sql += " GROUP BY restaurant.Rest_ID";
 
-    db.query(sql, (err, data) => {
-        if (err) return res.json(err);
+    db.query(sql, [`%${searchTerm}%`, `%${searchTerm}%`], (err, data) => {
+        if (err) {
+            console.error("Error executing query:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+        console.log("Query Result:", data); // Debugging the data sent to the frontend
         return res.json(data);
     });
 });
+
+
 
 app.get('/menu/:rest_id', (req, res) => {
     const restId = req.params.rest_id;
@@ -148,7 +165,7 @@ app.post('/login', async (req, res) => {
             table = 'Customer';
             break;
         case 'Restaurant':
-            query = 'SELECT Rest_ID, Rest_Name, Rest_UserName FROM Restaurant WHERE Rest_UserName = ? AND Rest_Password = ?';
+            query = 'SELECT * FROM Restaurant WHERE Rest_Username = ?';
             table = 'Restaurant';
             break;
         case 'Admin':
@@ -167,13 +184,17 @@ app.post('/login', async (req, res) => {
             }
 
             if (results.length > 0) {
+
                 const user = results[0];
 
                 if (userType === 'Admin' && user.Admin_Password === password) {
                     return res.status(200).json({ message: 'Login successful', user, userType: table });
                 }
+                if (userType === 'Restaurant' && user.Rest_Password === password) {
+                    return res.status(200).json({ message: 'Login successful', user, userType: table });
+                }
 
-                if (userType === 'Customer' && user.Cust_ID >= 16) {
+                if (userType === 'Customer' && user.Cust_ID >= 12) {
                     // Hash the provided password for customers with ID greater than or equal to 15
                     bcrypt.compare(password, user.Cust_Password, (bcryptErr, isValidPassword) => {
                         if (bcryptErr) {
@@ -381,5 +402,110 @@ app.get('/orders/:cust_id', (req, res) => {
         }
         console.log('Orders fetched successfully:', data);
         return res.json(data);
+    });
+});
+
+  
+// Get food frequencies
+app.get('/analytics/food-frequencies', (req, res) => {
+    const sql = `
+        SELECT food.Food_ID, food.Food_Name, COUNT(OrderItems.Food_ID) AS OrderCount
+        FROM food
+        LEFT JOIN OrderItems ON food.Food_ID = OrderItems.Food_ID
+        GROUP BY food.Food_ID
+        ORDER BY OrderCount DESC
+    `;
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error fetching food frequencies:', err);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+        res.json(results);
+    });
+});
+
+// Get number of orders per restaurant
+app.get('/analytics/orders-per-restaurant', (req, res) => {
+    const sql = `
+        SELECT restaurant.Rest_ID, restaurant.Rest_Name, COUNT(OrderItems.Orders_ID) AS OrderCount
+        FROM restaurant
+        LEFT JOIN OrderItems ON restaurant.Rest_ID = OrderItems.Rest_ID
+        GROUP BY restaurant.Rest_ID
+        ORDER BY OrderCount DESC
+    `;
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error fetching orders per restaurant:', err);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+        res.json(results);
+    });
+});
+
+app.post('/menu', (req, res) => {
+    console.log(req.body);
+    const { Food_Name, Price, Calories, Food_Description, ImageURL, Rest_ID } = req.body;
+    let nextFoodId = 1;
+
+    const FoodMaxQuery = 'SELECT MAX(Food_ID) AS maxId FROM Food';
+    db.query(FoodMaxQuery, (err, maxIdResults) => {
+        if (err) {
+            console.error('Error getting max ID:', err.message);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+
+        if (maxIdResults.length > 0 && maxIdResults[0].maxId) {
+            nextFoodId = maxIdResults[0].maxId + 1;
+        }
+        insertFood();
+    });
+
+    // Insert into Food table
+    function insertFood() {
+        const foodQuery = 'INSERT INTO Food (Food_ID, Food_Name, Price, Calories, Food_Description, ImageURL) VALUES (?, ?, ?, ?, ?, ?)';
+        db.query(foodQuery, [nextFoodId, Food_Name, Price, Calories, Food_Description, ImageURL], (err, result) => {
+            if (err) {
+                console.error('Error adding to Food table:', err);
+                return res.status(500).json({ error: 'Database error' });
+            }
+                
+            // Insert into Menu table
+            const menuQuery = 'INSERT INTO Menu (Food_ID, Rest_ID, Price) VALUES (?, ?, ?)';
+            db.query(menuQuery, [nextFoodId, Rest_ID, Price], (err, menuResult) => {
+                if (err) {
+                    console.error('Error adding to Menu table:', err);
+                    return res.status(500).json({ error: 'Database error' });
+                }
+    
+                res.status(201).json({ 
+                    Food_ID: nextFoodId, 
+                    Food_Name, 
+                    Price, 
+                    Calories, 
+                    Food_Description, 
+                    ImageURL, 
+                    Rest_ID 
+                });
+            });
+        });
+    }
+
+});
+
+// Remove a food item from the menu for a specific restaurant
+app.delete('/menu/:food_id/:rest_id', (req, res) => {
+    const { food_id, rest_id } = req.params;
+    const deleteQuery = 'DELETE FROM Menu WHERE Food_ID = ? AND Rest_ID = ?';
+    db.query(deleteQuery, [food_id, rest_id], (err, result) => {
+        if (err) {
+            console.error('Error deleting menu item:', err);
+            return res.status(500).json({ error: 'Database error' });
+        }
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Food item not found in Menu for this restaurant' });
+        }
+        res.status(204).send(); // No content to send back
     });
 });

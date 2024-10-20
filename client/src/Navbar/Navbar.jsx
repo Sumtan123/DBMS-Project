@@ -1,8 +1,9 @@
 import logo from "../assets/Images/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import "./Navbar.css";
+import "../Navbar/Navbar.css";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 function Navbar_RestoFood({ user, setUser, cartQuantity }) {
     const navigate = useNavigate();
     const loginClick = () => navigate("/login");
