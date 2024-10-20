@@ -8,10 +8,10 @@ const mongoose = require('mongoose');
 app.use(cors())
 app.use(express.json());
 const db = mysql2.createConnection({
-    host: "localhost",
-    user: 'root',
-    password: 'Jaidbms@123#',
-    database: 'dineswift'
+    host: "",
+    user: '',
+    password: '',
+    database: ''
 })
 
 
